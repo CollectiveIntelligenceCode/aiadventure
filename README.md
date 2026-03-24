@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AIVenture.ai
 
-## Getting Started
+Premium editorial platform for AI intelligence and commentary. Part of the Collective Intelligence Group ecosystem.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js 16 (App Router)
+- React 19
+- TypeScript 5
+- Tailwind CSS 4
+- Framer Motion
+- MDX via `next-mdx-remote` for content
+
+## Content model
+
+Content lives in `content/articles/` as MDX files with frontmatter. No CMS or database required at launch.
+
+**Tradeoff:** MDX-in-repo gives fast iteration and editorial control with zero infrastructure. When content volume grows or multiple authors need access, migrate to a headless CMS (Sanity, Contentlayer, or Supabase + structured tables). The `lib/mdx.ts` loader abstracts the data source, making migration straightforward.
+
+## Adding an article
+
+Create a new `.mdx` file in `content/articles/`:
+
+```mdx
+---
+title: "Article Title"
+slug: "article-slug"
+excerpt: "One to two sentence summary."
+date: "2026-03-25"
+topic: "frontier-models"
+tags: ["tag1", "tag2"]
+featured: false
+readTime: 5
+author: "Chris Bradshaw"
+---
+
+Article body in MDX...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Available topic slugs (see `content/topics.ts`):
+- `frontier-models`
+- `ai-products`
+- `creative-tools`
+- `work-productivity`
+- `agents-automation`
+- `media-culture`
+- `society-ethics`
+- `future-of-humans`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Open http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+## Pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Route | Description |
+|-------|-------------|
+| `/` | Homepage — hero, featured stories, latest, topics, newsletter |
+| `/articles` | All articles with topic filter |
+| `/articles/[slug]` | Article detail with MDX body |
+| `/topics` | All topics |
+| `/topics/[slug]` | Filtered articles by topic |
+| `/about` | About AIVenture.ai and the ecosystem |
+| `/newsletter` | Standalone newsletter signup |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+Deployed to Vercel. Push to `main` triggers production deploy.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+vercel --prod
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Future roadmap
+
+- Wire newsletter form to Resend or ConvertKit
+- Add `og-default.png` to `/public/`
+- Author profiles
+- Search
+- Supabase-backed content when volume requires
