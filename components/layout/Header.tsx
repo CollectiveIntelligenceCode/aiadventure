@@ -21,7 +21,7 @@ export default function Header() {
             href="/"
             className="font-[family-name:var(--font-playfair)] text-lg font-semibold tracking-tight text-white hover:text-[var(--accent)] transition-colors"
           >
-            AIVenture<span className="text-[var(--accent)]">.ai</span>
+            AIAdventure<span className="text-[var(--accent)]">.ai</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">

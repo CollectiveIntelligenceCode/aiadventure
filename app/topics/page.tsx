@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Topics',
-  description: 'Browse AIVenture.ai by theme — from frontier models to the future of humans with AI.',
+  description: 'Browse AIAdventure.ai by theme — from frontier models to the future of humans with AI.',
 }
 
 export default function TopicsPage() {

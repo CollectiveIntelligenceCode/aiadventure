@@ -15,25 +15,25 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://aiventure.ai'),
+  metadataBase: new URL('https://aiadventure.ai'),
   title: {
-    default: 'AIVenture.ai — Signal Over Noise',
-    template: '%s | AIVenture.ai',
+    default: 'AIAdventure.ai — Signal Over Noise',
+    template: '%s | AIAdventure.ai',
   },
   description:
     'Curated intelligence on AI that actually matters. For founders, operators, creators, and curious minds navigating the frontier.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://aiventure.ai',
-    siteName: 'AIVenture.ai',
-    title: 'AIVenture.ai — Signal Over Noise',
+    url: 'https://aiadventure.ai',
+    siteName: 'AIAdventure.ai',
+    title: 'AIAdventure.ai — Signal Over Noise',
     description: 'Curated intelligence on AI that actually matters.',
     images: [{ url: '/og-default.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AIVenture.ai — Signal Over Noise',
+    title: 'AIAdventure.ai — Signal Over Noise',
     description: 'Curated intelligence on AI that actually matters.',
   },
   robots: { index: true, follow: true },

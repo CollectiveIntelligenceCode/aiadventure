@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <p className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-white mb-3">
-              AIVenture<span className="text-[var(--accent)]">.ai</span>
+              AIAdventure<span className="text-[var(--accent)]">.ai</span>
             </p>
             <p className="text-sm text-[var(--text-secondary)] leading-relaxed max-w-xs">
               Curated intelligence on AI that actually matters. Signal over noise.
@@ -64,7 +64,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-[var(--border)] flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[var(--text-muted)]">
-            © {new Date().getFullYear()} AIVenture.ai — Part of the{' '}
+            © {new Date().getFullYear()} AIAdventure.ai — Part of the{' '}
             <a href="https://collectiveintelligence.co" className="hover:text-[var(--text-secondary)] transition-colors">
               Collective Intelligence Group
             </a>

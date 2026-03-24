@@ -1,4 +1,4 @@
-# AIVenture.ai
+# AIAdventure.ai
 
 Premium editorial platform for AI intelligence and commentary. Part of the Collective Intelligence Group ecosystem.
 
@@ -65,7 +65,7 @@ Open http://localhost:3000
 | `/articles/[slug]` | Article detail with MDX body |
 | `/topics` | All topics |
 | `/topics/[slug]` | Filtered articles by topic |
-| `/about` | About AIVenture.ai and the ecosystem |
+| `/about` | About AIAdventure.ai and the ecosystem |
 | `/newsletter` | Standalone newsletter signup |
 
 ## Deployment

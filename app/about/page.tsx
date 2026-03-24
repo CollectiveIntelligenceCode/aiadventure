@@ -5,7 +5,7 @@ import NewsletterForm from '@/components/newsletter/NewsletterForm'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'What AIVenture.ai is, why it exists, and where it fits in the wider Collective Intelligence ecosystem.',
+  description: 'What AIAdventure.ai is, why it exists, and where it fits in the wider Collective Intelligence ecosystem.',
 }
 
 const ECOSYSTEM = [
@@ -39,7 +39,7 @@ export default function AboutPage() {
             Editorial over template.
           </h1>
           <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
-            AIVenture.ai is a content-led intelligence platform for people who want to understand
+            AIAdventure.ai is a content-led intelligence platform for people who want to understand
             what is actually happening in AI — not just what is being announced.
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function AboutPage() {
                 and then say something worth reading.
               </p>
               <p>
-                AIVenture.ai covers frontier models, AI products, creative tools, agents, automation,
+                AIAdventure.ai covers frontier models, AI products, creative tools, agents, automation,
                 work, media, society, and the deeper human questions that sit underneath all of it.
                 Not everything. Not every day. But what matters, when it matters.
               </p>
@@ -69,7 +69,7 @@ export default function AboutPage() {
             <h2 className="font-[family-name:var(--font-playfair)] text-2xl font-semibold text-white mb-4">Who is behind it</h2>
             <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
               <p>
-                AIVenture.ai is part of the Collective Intelligence Group, founded by{' '}
+                AIAdventure.ai is part of the Collective Intelligence Group, founded by{' '}
                 <a href="https://chrisbradshaw.ai" className="text-[var(--accent)] hover:underline">
                   Chris Bradshaw
                 </a>
