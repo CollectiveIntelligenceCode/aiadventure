@@ -2,7 +2,6 @@
 
 import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
-import { SUBSTACK_URL, YOUTUBE_CHANNEL_URL } from '@/lib/rss'
 
 const AmbientCanvas = dynamic(() => import('./AmbientCanvas'), { ssr: false })
 
@@ -44,28 +43,19 @@ export default function HeroSection() {
             and think alongside AI.
           </p>
 
+          {/* Coming soon CTA */}
           <div className="flex flex-wrap items-center gap-4">
-            <a
-              href={SUBSTACK_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-medium text-white hover:bg-blue-500 transition-colors"
-            >
-              Read the newsletter
-            </a>
-            <a
-              href={YOUTUBE_CHANNEL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--text-secondary)] hover:text-white hover:border-white/20 transition-colors"
-            >
-              Watch on YouTube →
-            </a>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)]/20 px-6 py-3 text-sm font-medium text-[var(--accent)]">
+              Newsletter — coming soon
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--text-muted)]">
+              Video — coming soon
+            </span>
           </div>
 
           {/* Platform pills */}
           <div className="flex items-center gap-3 mt-8">
-            <span className="text-xs text-[var(--text-muted)]">Available on</span>
+            <span className="text-xs text-[var(--text-muted)]">Launching on</span>
             <span className="text-xs px-2.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400">
               Substack
             </span>
