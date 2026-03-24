@@ -56,7 +56,7 @@ export default function YouTubeFeed() {
                     YouTube
                   </span>
                 </div>
-                <h3 className="font-[family-name:var(--font-playfair)] text-sm font-semibold text-[var(--text-secondary)] leading-snug">
+                <h3 className="font-[family-name:var(--font-sans)] text-sm font-semibold text-[var(--text-secondary)] leading-snug">
                   {video.title}
                 </h3>
               </div>

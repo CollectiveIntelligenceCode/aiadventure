@@ -8,7 +8,7 @@ export default function SubscribeCTA() {
           <p className="text-xs uppercase tracking-[0.2em] text-[var(--accent)] mb-4">
             Coming soon
           </p>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-semibold text-white mb-4 leading-snug">
+          <h2 className="font-[family-name:var(--font-sans)] text-3xl md:text-4xl font-semibold text-white mb-4 leading-snug">
             Stay close to what matters
           </h2>
           <p className="text-[var(--text-secondary)] leading-relaxed mb-10">

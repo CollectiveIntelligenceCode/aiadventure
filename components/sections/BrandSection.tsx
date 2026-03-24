@@ -16,7 +16,7 @@ export default function BrandSection() {
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--accent)] mb-4">
               What this is
             </p>
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-semibold text-white mb-6 leading-snug">
+            <h2 className="font-[family-name:var(--font-sans)] text-3xl md:text-4xl font-semibold text-white mb-6 leading-snug">
               Signal over noise.
             </h2>
             <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">

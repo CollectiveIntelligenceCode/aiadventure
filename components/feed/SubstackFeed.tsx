@@ -47,7 +47,7 @@ export default function SubstackFeed() {
                   Substack
                 </span>
               </div>
-              <h3 className="font-[family-name:var(--font-playfair)] text-base font-semibold text-white mb-3 leading-snug">
+              <h3 className="font-[family-name:var(--font-sans)] text-base font-semibold text-white mb-3 leading-snug">
                 {post.title}
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">

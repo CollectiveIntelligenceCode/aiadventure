@@ -15,7 +15,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
     >
       <div className="p-6">
         <TopicBadge topicSlug={article.topic} asLink={false} className="mb-4" />
-        <h3 className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-white mb-3 leading-snug group-hover:text-[var(--accent)] transition-colors line-clamp-2">
+        <h3 className="font-[family-name:var(--font-sans)] text-lg font-semibold text-white mb-3 leading-snug group-hover:text-[var(--accent)] transition-colors line-clamp-2">
           {article.title}
         </h3>
         <p className="text-sm text-[var(--text-secondary)] leading-relaxed line-clamp-3 mb-4">

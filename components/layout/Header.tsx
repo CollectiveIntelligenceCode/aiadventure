@@ -17,7 +17,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="font-[family-name:var(--font-playfair)] text-lg font-semibold tracking-tight text-white hover:text-[var(--accent)] transition-colors"
+            className="font-[family-name:var(--font-sans)] text-lg font-semibold tracking-tight text-white hover:text-[var(--accent)] transition-colors"
           >
             AIAdventure<span className="text-[var(--accent)]">.ai</span>
           </Link>

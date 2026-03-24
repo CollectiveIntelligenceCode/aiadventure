@@ -29,7 +29,7 @@ export default function HeroSection() {
             Intelligence for the frontier
           </p>
 
-          <h1 className="font-[family-name:var(--font-playfair)] text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-semibold leading-[1.05] tracking-tight text-white mb-8">
+          <h1 className="font-[family-name:var(--font-sans)] text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-semibold leading-[1.05] tracking-tight text-white mb-8">
             What actually
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent)] via-violet-400 to-[var(--accent)]">

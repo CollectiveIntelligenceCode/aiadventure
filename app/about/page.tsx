@@ -16,7 +16,7 @@ export default function AboutPage() {
       <main className="pt-16">
         <div className="mx-auto max-w-3xl px-6 lg:px-8 py-20">
           <p className="text-xs uppercase tracking-[0.2em] text-[var(--accent)] mb-3">About</p>
-          <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-semibold text-white mb-6 leading-tight">
+          <h1 className="font-[family-name:var(--font-sans)] text-4xl md:text-5xl font-semibold text-white mb-6 leading-tight">
             Signal over noise.
             <br />
             Editorial over template.

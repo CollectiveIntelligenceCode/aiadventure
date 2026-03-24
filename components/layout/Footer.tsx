@@ -19,7 +19,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <p className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-white mb-3">
+            <p className="font-[family-name:var(--font-sans)] text-lg font-semibold text-white mb-3">
               AIAdventure<span className="text-[var(--accent)]">.ai</span>
             </p>
             <p className="text-sm text-[var(--text-secondary)] leading-relaxed max-w-xs">

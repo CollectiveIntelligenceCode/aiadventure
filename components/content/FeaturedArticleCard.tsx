@@ -36,7 +36,7 @@ export default function FeaturedArticleCard({
 
         <h2
           className={cn(
-            'font-[family-name:var(--font-playfair)] font-semibold text-white leading-snug mb-4',
+            'font-[family-name:var(--font-sans)] font-semibold text-white leading-snug mb-4',
             'group-hover:text-[var(--accent)] transition-colors',
             isPrimary ? 'text-3xl md:text-4xl' : 'text-xl'
           )}
