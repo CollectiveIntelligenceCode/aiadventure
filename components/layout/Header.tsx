@@ -3,11 +3,12 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { SUBSTACK_URL, YOUTUBE_CHANNEL_URL } from '@/lib/rss'
 
 const NAV_LINKS = [
-  { href: '/articles', label: 'Latest' },
-  { href: '/topics', label: 'Topics' },
-  { href: '/about', label: 'About' },
+  { href: '/about', label: 'About', external: false },
+  { href: SUBSTACK_URL, label: 'Newsletter', external: true },
+  { href: YOUTUBE_CHANNEL_URL, label: 'YouTube', external: true },
 ]
 
 export default function Header() {
@@ -25,39 +26,44 @@ export default function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
-            {NAV_LINKS.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className={cn(
-                  'text-sm tracking-wide transition-colors',
-                  pathname === href || pathname.startsWith(href + '/')
-                    ? 'text-white'
-                    : 'text-[var(--text-secondary)] hover:text-white'
-                )}
-              >
-                {label}
-              </Link>
-            ))}
+            {NAV_LINKS.map(({ href, label, external }) =>
+              external ? (
+                <a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm tracking-wide text-[var(--text-secondary)] hover:text-white transition-colors"
+                >
+                  {label} ↗
+                </a>
+              ) : (
+                <Link
+                  key={href}
+                  href={href}
+                  className={cn(
+                    'text-sm tracking-wide transition-colors',
+                    pathname === href ? 'text-white' : 'text-[var(--text-secondary)] hover:text-white'
+                  )}
+                >
+                  {label}
+                </Link>
+              )
+            )}
           </nav>
 
-          <Link
-            href="/newsletter"
+          <a
+            href={SUBSTACK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/40 bg-[var(--accent)]/10 px-4 py-1.5 text-sm text-[var(--accent)] hover:bg-[var(--accent)]/20 transition-colors"
           >
             Subscribe
-          </Link>
+          </a>
 
           <div className="flex md:hidden items-center gap-4">
-            {NAV_LINKS.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className="text-xs text-[var(--text-secondary)] hover:text-white transition-colors"
-              >
-                {label}
-              </Link>
-            ))}
+            <Link href="/about" className="text-xs text-[var(--text-secondary)] hover:text-white transition-colors">About</Link>
+            <a href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer" className="text-xs text-[var(--text-secondary)] hover:text-white transition-colors">Newsletter ↗</a>
           </div>
         </div>
       </div>

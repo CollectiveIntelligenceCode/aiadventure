@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { SUBSTACK_URL, YOUTUBE_CHANNEL_URL } from '@/lib/rss'
 
 const ECOSYSTEM_LINKS = [
   { href: 'https://chrisbradshaw.ai', label: 'ChrisBradshaw.ai' },
@@ -7,10 +8,9 @@ const ECOSYSTEM_LINKS = [
 ]
 
 const SITE_LINKS = [
-  { href: '/articles', label: 'Latest' },
-  { href: '/topics', label: 'Topics' },
-  { href: '/about', label: 'About' },
-  { href: '/newsletter', label: 'Newsletter' },
+  { href: '/about', label: 'About', external: false },
+  { href: SUBSTACK_URL, label: 'Newsletter', external: true },
+  { href: YOUTUBE_CHANNEL_URL, label: 'YouTube', external: true },
 ]
 
 export default function Footer() {
@@ -30,14 +30,25 @@ export default function Footer() {
           <div>
             <p className="text-xs uppercase tracking-widest text-[var(--text-muted)] mb-4">Explore</p>
             <ul className="space-y-2">
-              {SITE_LINKS.map(({ href, label }) => (
+              {SITE_LINKS.map(({ href, label, external }) => (
                 <li key={href}>
-                  <Link
-                    href={href}
-                    className="text-sm text-[var(--text-secondary)] hover:text-white transition-colors"
-                  >
-                    {label}
-                  </Link>
+                  {external ? (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-[var(--text-secondary)] hover:text-white transition-colors"
+                    >
+                      {label} ↗
+                    </a>
+                  ) : (
+                    <Link
+                      href={href}
+                      className="text-sm text-[var(--text-secondary)] hover:text-white transition-colors"
+                    >
+                      {label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

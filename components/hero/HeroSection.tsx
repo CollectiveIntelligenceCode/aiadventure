@@ -1,8 +1,8 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { SUBSTACK_URL, YOUTUBE_CHANNEL_URL } from '@/lib/rss'
 
 const AmbientCanvas = dynamic(() => import('./AmbientCanvas'), { ssr: false })
 
@@ -40,23 +40,38 @@ export default function HeroSection() {
 
           <p className="text-lg sm:text-xl text-[var(--text-secondary)] leading-relaxed max-w-2xl mb-12">
             Not every breakthrough deserves your attention. We track what is worth knowing —
-            the developments, ideas, and implications that will shape how we work, create,
+            the developments, ideas, and implications shaping how we work, create,
             and think alongside AI.
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
-            <Link
-              href="/articles"
+            <a
+              href={SUBSTACK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-medium text-white hover:bg-blue-500 transition-colors"
             >
-              Explore latest
-            </Link>
-            <Link
-              href="/newsletter"
+              Read the newsletter
+            </a>
+            <a
+              href={YOUTUBE_CHANNEL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--text-secondary)] hover:text-white hover:border-white/20 transition-colors"
             >
-              Get the briefing →
-            </Link>
+              Watch on YouTube →
+            </a>
+          </div>
+
+          {/* Platform pills */}
+          <div className="flex items-center gap-3 mt-8">
+            <span className="text-xs text-[var(--text-muted)]">Available on</span>
+            <span className="text-xs px-2.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400">
+              Substack
+            </span>
+            <span className="text-xs px-2.5 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400">
+              YouTube
+            </span>
           </div>
         </motion.div>
       </div>

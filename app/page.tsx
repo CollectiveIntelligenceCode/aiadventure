@@ -1,10 +1,10 @@
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import HeroSection from '@/components/hero/HeroSection'
-import FeaturedSection from '@/components/sections/FeaturedSection'
-import LatestFeed from '@/components/sections/LatestFeed'
-import TopicsSection from '@/components/sections/TopicsSection'
-import NewsletterSection from '@/components/sections/NewsletterSection'
+import SubstackFeed from '@/components/feed/SubstackFeed'
+import YouTubeFeed from '@/components/feed/YouTubeFeed'
+import BrandSection from '@/components/sections/BrandSection'
+import SubscribeCTA from '@/components/sections/SubscribeCTA'
 
 export default function HomePage() {
   return (
@@ -12,10 +12,10 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroSection />
-        <FeaturedSection />
-        <LatestFeed />
-        <TopicsSection />
-        <NewsletterSection />
+        <SubstackFeed />
+        <YouTubeFeed />
+        <BrandSection />
+        <SubscribeCTA />
       </main>
       <Footer />
     </>
