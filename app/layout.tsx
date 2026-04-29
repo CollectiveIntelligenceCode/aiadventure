@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk, DM_Mono } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 
 const spaceGrotesk = Space_Grotesk({
@@ -47,7 +48,43 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${dmMono.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <Script
+          id="schema-site"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'WebSite',
+                  name: 'AI Adventure',
+                  alternateName: 'AIAdventure.ai',
+                  url: 'https://aiadventure.ai',
+                  description:
+                    'Curated intelligence on AI that actually matters. Signal over noise for founders, operators, and curious minds.',
+                },
+                {
+                  '@type': 'Organization',
+                  name: 'AI Adventure',
+                  url: 'https://aiadventure.ai',
+                  parentOrganization: {
+                    '@type': 'Organization',
+                    name: 'The Collective Intelligence',
+                    url: 'https://thecollectiveintelligence.co',
+                  },
+                  founder: {
+                    '@type': 'Person',
+                    name: 'Chris Bradshaw',
+                    url: 'https://chrisbradshaw.ai',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+        {children}
+      </body>
     </html>
   )
 }

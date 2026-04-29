@@ -7,6 +7,7 @@ import SubscribeCTA from '@/components/sections/SubscribeCTA'
 export const metadata: Metadata = {
   title: 'About AIAdventure.ai',
   description: 'What AIAdventure.ai is, why it exists, and where it fits in the wider Collective Intelligence ecosystem.',
+  alternates: { canonical: 'https://aiadventure.ai/about' },
 }
 
 export default function AboutPage() {
