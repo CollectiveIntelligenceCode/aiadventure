@@ -5,14 +5,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: 'https://aiadventure.ai',
       lastModified: new Date(),
-      changeFrequency: 'daily',
+      changeFrequency: 'weekly' as const,
       priority: 1,
     },
     {
       url: 'https://aiadventure.ai/about',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'monthly' as const,
       priority: 0.8,
+    },
+    {
+      url: 'https://aiadventure.ai/free',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
     },
   ]
 }
