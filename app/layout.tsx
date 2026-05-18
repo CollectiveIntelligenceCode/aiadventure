@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk, DM_Mono } from 'next/font/google'
+import { GA4Script } from './components/GA4Script'
 import './globals.css'
 
 const spaceGrotesk = Space_Grotesk({
@@ -81,6 +82,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />
+        <GA4Script />
       </head>
       <body className="antialiased">
         {children}
