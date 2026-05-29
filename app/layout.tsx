@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk, DM_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import { GA4Script } from './components/GA4Script'
 import './globals.css'
 
@@ -86,6 +87,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   )
